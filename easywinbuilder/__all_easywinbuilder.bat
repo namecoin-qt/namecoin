@@ -1,5 +1,4 @@
 @echo EasyWinBuilder v0.1
-@echo %time%
 @echo.
 @set RUNALL=1
 @echo.

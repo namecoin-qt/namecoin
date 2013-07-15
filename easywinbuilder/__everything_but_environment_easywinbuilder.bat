@@ -3,30 +3,11 @@
 @if errorlevel 1 goto error
 @call 2b_run_unpack.bat
 @if errorlevel 1 goto error
-@call 3a_build_boost.bat
-@if errorlevel 1 goto error
-@call 3b_run_build_dep.bat
-@if errorlevel 1 goto error
-@call 3c_build_miniupnpc.bat
-@if errorlevel 1 goto error
-@call 4a_build_daemon.bat
-@if errorlevel 1 goto error
-@call 4b_build_qt.bat
-@if errorlevel 1 goto error
-@rem call 5a_run_hash_daemon.bat
-@if errorlevel 1 goto error
-@rem call 5b_run_hash_qt.bat
-@if errorlevel 1 goto error
-@call 6_gather_dlls.bat
-@if errorlevel 1 goto error
-@echo.
-@echo.
+@call __everything_from_after_unpack_easywinbuilder.bat
 @goto end
 
 :error
 @echo Fatal error! Errorlevel: %errorlevel%
-
-:end
-@echo %TIME%
 @pause
 
+:end

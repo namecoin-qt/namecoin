@@ -1,4 +1,4 @@
-EasyWinBuilder v0.1
+EasyWinBuilder v0.2
 ===============
 (c) 2013 phelix / blockchained.com - MIT license
 
@@ -10,13 +10,17 @@ In this repository there are no changes to the Bitcoin code itself though the pr
 
 To change dependency versions edit set_vars.bat
 
+File Hashes
+-----------
+The process will calculate a hash of the disassemblies of the final executables. The idea is to validate binaries by several people.
+I am not quite sure if this will reliably result in the same hash for the same build. Please let me know if you get different values or know how to improve this feature.
+
 ToDo
 -----
-* Compare binary hashes
-    * Work around timestamping (force timestamp / disassembly? filtered disassembly?)
-    * Work around nondeterministic optimizations: -frandom-seed=1984 for all sources and dependencies
+* Check Qt binary hashes (deterministic build)
+* Fix daemon deterministic build
 * Automatic environment install (how to bootstrap?)
-* Port to Namecoin (this project was started for Namecoin originally)
+
 
 Credits
 -------

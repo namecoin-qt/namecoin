@@ -1,6 +1,6 @@
 @call set_vars.bat
 @bash patch_files.sh
-
+@echo Building Bitcoin daemon...
 @rem todo: rewrite this with ^ line wrapping
 @set PARAMS=BOOST_SUFFIX=%BOOSTSUFFIX%
 @set PARAMS=%PARAMS% INCLUDEPATHS="
@@ -17,8 +17,10 @@
 @set PARAMS=%PARAMS% -L'%CD%/../%EWBLIBS%/%BERKELEYDB%/build_unix'
 @set PARAMS=%PARAMS% -L'%CD%/../%EWBLIBS%/%MINIUPNPC%'
 @set PARAMS=%PARAMS%"
-
+@set PARAMS=%PARAMS% ADDITIONALCCFLAGS="%ADDITIONALCCFLAGS%"
+@set PARAMS=%PARAMS:\=/%
 @echo PARAMS: %PARAMS%
+
 @set PARAMS=%PARAMS% USE_UPNP=1
 @rem remove "rem " from the next line to deactivate upnp
 @rem set PARAMS=%PARAMS% USE_UPNP=-
@@ -31,6 +33,8 @@
 @strip %COINNAME%d.exe
 @if errorlevel 1 goto error
 @echo !!!!!!! Bitcoin daemon DONE: Find %COINNAME%d.exe in ./src :)
+@echo.
+@echo.
 @if not "%RUNALL%"=="1" pause
 @goto end
 
@@ -39,6 +43,5 @@
 @echo.
 @echo !!!!!! Error! Build daemon failed.
 @pause
-
 :end
 @cd ..\easywinbuilder

@@ -8,10 +8,14 @@ cd ..
 cd libs
 
 echo Unpacking dependencies...
-tar --atime-preserve -xzvf $OPENSSL.tar.gz
-tar --atime-preserve -xzvf $BERKELEYDB.tar.gz
-tar --atime-preserve -xzvf $BOOST.tar.gz
-tar --atime-preserve -xzvf $MINIUPNPC.tar.gz
+echo  openssl...
+tar --atime-preserve -xzvf $OPENSSL.tar.gz > /dev/null
+echo  berkeleydb...
+tar --atime-preserve -xzvf $BERKELEYDB.tar.gz > /dev/null
+echo  boost...
+tar --atime-preserve -xzvf $BOOST.tar.gz > /dev/null
+echo  miniupnpc...
+tar --atime-preserve -xzvf $MINIUPNPC.tar.gz > /dev/null
 
 echo
 

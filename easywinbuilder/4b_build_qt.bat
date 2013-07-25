@@ -27,7 +27,7 @@
 @echo building qt - make...
 mingw32-make -f Makefile.Release
 @if errorlevel 1 goto continue
-@echo !!!!!!! Bitcoin-Qt DONE: Find %COINNAME%-qt.exe in ./release :)
+@echo !!!!!!! %COINNAME%-qt DONE: Find %COINNAME%-qt.exe in ./release :)
 :continue
 @echo.
 @echo.

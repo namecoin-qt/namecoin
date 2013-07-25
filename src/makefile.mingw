@@ -82,13 +82,13 @@ all: namecoind
 
 
 obj/%.o: %.cpp $(HEADERS)
-	$(CXX) -c $(CXXFLAGS) -DGUI -o $@ $<
+	$(CXX) -c $(CFLAGS) -DGUI -o $@ $<
 
 cryptopp/obj/%.o: cryptopp/%.cpp
-	$(CXX) -c $(CXXFLAGS) -O3 -o $@ $<
+	$(CXX) -c $(CFLAGS) -O3 -o $@ $<
 
 obj/nogui/%.o: %.cpp $(HEADERS)
-	$(CXX) -c $(CXXFLAGS) -o $@ $<
+	$(CXX) -c $(CFLAGS) -o $@ $<
 
 obj/test/%.o: test/%.cpp $(HEADERS)
 	$(CXX) -c $(CFLAGS) -o $@ $<
@@ -96,7 +96,7 @@ obj/test/%.o: test/%.cpp $(HEADERS)
 obj/nogui/namecoin.o: namecoin.h
 
 namecoind: $(BASE_OBJS:obj/%=obj/nogui/%) obj/nogui/namecoin.o
-	$(CXX) $(CXXFLAGS) -o $@ $(LIBPATHS) $^ $(LIBS)
+	$(CXX) $(CFLAGS) -o $@ $(LIBPATHS) $^ $(LIBS)
 
 clean:
 	-rm -f namecoin namecoind

@@ -20,6 +20,7 @@ ToDo
 * Check Qt binary hashes (deterministic build)
 * Fix daemon deterministic build
 * Automatic environment install (how to bootstrap?)
+* Try to speed up building of OpenSSL and Berkeley DB by only building what is necessary
 
 
 Credits

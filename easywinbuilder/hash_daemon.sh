@@ -1,3 +1,3 @@
 echo Hash of daemon binary [experimental]...
 bash dahash.sh ../src/${COINNAME}d.exe
-echo phelix got: [ 90e55a6806913ba09f426899cca0d6492534a56fab903e039a8fd225ba64f71c ]
+echo phelix got: 

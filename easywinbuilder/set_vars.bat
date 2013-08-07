@@ -10,7 +10,10 @@
 @set BOOSTSUFFIX=-mgw46-mt-1_54
 @set MINIUPNPC=miniupnpc-1.8
 @set EWBLIBS=libs
-@set COINNAME=namecoin
+
+@rem bootstrap coin name
+@for /F %%a in ('dir /b ..\*.pro') do @set COINNAME=%%a
+@set COINNAME=%COINNAME:-qt.pro=%
 
 @set QTPATH=C:\Qt\4.8.5\bin
 @set QTDOWNLOADPATH=http://download.qt-project.org/official_releases/qt/4.8/4.8.5/qt-win-opensource-4.8.5-mingw.exe

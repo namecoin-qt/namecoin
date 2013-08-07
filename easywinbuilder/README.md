@@ -2,7 +2,7 @@ EasyWinBuilder v0.2
 ===============
 (c) 2013 phelix / blockchained.com - MIT license
 
-Download environment software, all dependencies and build Bitcoin/Namecoin automatically. To run simply double click __all_easywinbuilder.bat or manually start the batch files in order. Building Bitcoin on Windows really is a pain. Hopefully this saves people some trouble.
+Download environment software, all dependencies and build Bitcoin/Namecoin/Altcoin automatically. To run simply double click __all_easywinbuilder.bat or manually start the batch files in order. Building Bitcoin on Windows really is a pain. Hopefully this saves people some trouble.
 
 EasyWinBuilder can run on a mint windows system (e.g. a virtual machine) or a normal system. It might overwrite your MinGW or Qt installation, though. Please note the process takes about half an hour or more and will need about 3GB of hard drive space.
 
@@ -17,7 +17,7 @@ I am not quite sure if this will reliably result in the same hash for the same b
 
 ToDo
 -----
-* Check Qt binary hashes (deterministic build)
+* Check daemon disassembly hashes (deterministic build)
 * Fix daemon deterministic build
 * Automatic environment install (how to bootstrap?)
 * Try to speed up building of OpenSSL and Berkeley DB by only building what is necessary

@@ -1,7 +1,7 @@
 @call set_vars.bat
-@echo About to download MinGW installer.
+@echo About to download MinGW installer - you need to install it manually like this:
 @echo  Use prepackaged catalogue
-@echo  Install to default directory
+@echo  Install to default directory: C:\MinGW
 @echo  Configure options: C, C++, MSYS basic system
 @echo.
 @pause

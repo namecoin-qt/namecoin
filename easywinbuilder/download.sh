@@ -3,6 +3,8 @@ echo Downloading tools...
 mingw-get install msys-wget-bin # > /dev/null 2>&1
 mingw-get install msys-unzip-bin #> /dev/null 2>&1
 mingw-get install msys-perl # > /dev/null 2>&1
+# There is a problem with MSYS bash and sh that stalls OpenSSL config on some systems. Using rxvt shell as a workaround.
+mingw-get install msys-rxvt # > /dev/null 2>&1
 echo
 
 set -o errexit
